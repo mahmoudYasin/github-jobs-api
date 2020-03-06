@@ -13,6 +13,8 @@ Also, there are conditions for each API (Test Case) to check the response code a
 
 To run the automation script successfully, you have to unselect the negative test cases T_C(4,5,27,28,29,30).
 
+Also, I made a test run you can check it by download the file name ```GitHub Jobs API's collection .postman_test_run.json```
+
 ## Getting Started & Prerequisites
 
 Install the Postman Tool.
