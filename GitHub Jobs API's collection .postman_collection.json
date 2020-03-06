@@ -1,0 +1,1429 @@
+{
+	"info": {
+		"_postman_id": "687c76a9-f216-44ff-a6b1-d79cb4ee9cb8",
+		"name": "GitHub Jobs API's collection ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "T_C1 Available_Positions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "da601abc-5751-4e21-a036-607e9dca75c3",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C2 use HTTP nested of HTTPS URL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8495b1ca-8baa-458a-aae5-ae4bc13953be",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://jobs.github.com/{{endpoint}}",
+					"protocol": "http",
+					"host": [
+						"jobs",
+						"github",
+						"com"
+					],
+					"path": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_3 location with description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fc2c142-ae0b-4aa6-a03b-822f480402c3",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&location={{location}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "location",
+							"value": "{{location}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C4 Use POST nested of GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7af163b4-56e2-4a79-8ea1-4ea41f808cf8",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 422\", function () {",
+							"    pm.response.to.have.status(422);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "test:test"
+				},
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C5 change endpoint response to XML",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ec29d683-1f93-4257-b1a9-6e7e4932d3e6",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/positions.xml",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"positions.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 6 Description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a20d6443-745c-4478-af65-2eb1287fe143",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 7 empty description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bbad70d3-9577-476f-9bca-8cdf21f515b0",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description=",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 8 special character_description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4c41407b-ff34-4d44-bc36-f1a7c5ad2a4d",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description=@#$%^%$#@!",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "@"
+						}
+					],
+					"hash": "$%^%$#@!"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 9 numbers_description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44bbfef2-c0b2-4cd9-a131-682a68603c62",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description=1234567890",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 10 Numbers_specialcharacters_description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "296d7ad1-fea3-4b19-84ab-3a8fab6b0193",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description=1234567890!@#$%^&",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "1234567890!@"
+						}
+					],
+					"hash": "$%^&"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 11 description_page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5ac985aa-1c6c-4527-9eaa-dcc38d3752eb",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&page={{page}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "page",
+							"value": "{{page}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 12 description_page with arabic number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1ee8beca-af97-4807-a6b1-fc3686b0cdef",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&page=٤",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "page",
+							"value": "٤"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 13 Description_special character in page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "97dd483b-fb73-4e04-9fbc-1b6e3562e35d",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&page=@#$%^",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "page",
+							"value": "@"
+						}
+					],
+					"hash": "$%^"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 14 Description_ with minus page number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ae2caa37-0ad9-4541-bf86-3c34a643ba78",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&page=-6",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "page",
+							"value": "-6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 15 Page without description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3d53d99b-aaad-430a-a465-1952c09449ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?page={{page}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{page}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 16 location without description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e68b2490-a65d-42a4-8eb0-c1736a357096",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?location={{location}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "{{location}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 17 multiple location without description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a441d259-f51c-4847-bb91-ff9cbce64d2e",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?location={{location}},fsdjds",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "{{location}},fsdjds"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 18 location with special character and numbers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84ff7f5d-50e1-4a24-8ac1-3864f8021f2f",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?location=1234567!@#$%",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "1234567!@"
+						}
+					],
+					"hash": "$%"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 19 location with description & page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "13a6e550-f366-4249-ad0c-0d7220dc6c89",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&location={{location}}&page={{page}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "location",
+							"value": "{{location}}"
+						},
+						{
+							"key": "page",
+							"value": "{{page}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 20 location with long & lat and description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d470df84-ca4d-4005-a82c-1e42de8d11b6",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&location={{location}}&lat={{lat}}&long={{long}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "location",
+							"value": "{{location}}"
+						},
+						{
+							"key": "lat",
+							"value": "{{lat}}"
+						},
+						{
+							"key": "long",
+							"value": "{{long}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 21 location with long & lat special character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4db32619-5f96-4802-bf08-79e10ee50e87",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?location={{location}}&lat=#$%231&long=^%^%366",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "{{location}}"
+						},
+						{
+							"key": "lat",
+							"value": ""
+						}
+					],
+					"hash": "$%231&long=^%^%366"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 22 fill time",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8beca6c2-93db-41f5-8f03-b067195b0d96",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&full_time={{full_time}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "full_time",
+							"value": "{{full_time}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 23 full time spical character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2964e03-dd4c-4004-a0b6-fa819f2ae148",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&full_time=$@$%@&*@",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "full_time",
+							"value": "$@$%@"
+						},
+						{
+							"key": "*@",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 24 full time zero or one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8aa94415-adc1-4061-92f2-fc0418db649f",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}?description={{description}}&full_time=6",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "{{description}}"
+						},
+						{
+							"key": "full_time",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 25 job by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c84d4ba2-a028-4de0-84d1-37898fb01444",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/positions/{{job_id}}.json",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"positions",
+						"{{job_id}}.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 26 job by id and markdown (not working right)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "86193f85-a2e9-440c-8887-054072105141",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/positions/{{job_id}}.json?markdown=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"positions",
+						"{{job_id}}.json"
+					],
+					"query": [
+						{
+							"key": "markdown",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 27 job by id and try to delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ddc18d81-b93c-4917-bace-fcfe92952646",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/positions/{{job_id}}.json?markdown=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"positions",
+						"{{job_id}}.json"
+					],
+					"query": [
+						{
+							"key": "markdown",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 28 job by id wrong id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c16df86f-8ee8-47c0-bd40-e20356370a90",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/positions/8723667326776.json?markdown=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"positions",
+						"8723667326776.json"
+					],
+					"query": [
+						{
+							"key": "markdown",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 29 job by id wrong id and change it to POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "27e45de5-da99-44c6-9f57-078b8140c2e6",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/positions/6787237823923.json?markdown=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"positions",
+						"6787237823923.json"
+					],
+					"query": [
+						{
+							"key": "markdown",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 30 job by id send id inisde the body",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "291aadca-3c43-460b-af9f-b9b395985276",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "445c41a5-c066-4db8-9c01-0e1c02ad9333",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/positions/.json?markdown=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"positions",
+						".json"
+					],
+					"query": [
+						{
+							"key": "markdown",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T_C 31 Available_Positions Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "da601abc-5751-4e21-a036-607e9dca75c3",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"//Check the status code",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"//Check the responce time",
+							"pm.test(\"Response time is less than 10000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(10000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{endpoint}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

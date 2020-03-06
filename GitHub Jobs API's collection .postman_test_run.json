@@ -1,0 +1,942 @@
+{
+	"id": "64ad1e63-493b-4a26-b468-820a6b4b2582",
+	"name": "GitHub Jobs API's collection ",
+	"timestamp": "2020-03-06T19:06:24.884Z",
+	"collection_id": "687c76a9-f216-44ff-a6b1-d79cb4ee9cb8",
+	"folder_id": 0,
+	"environment_id": "9af15426-77c2-42e9-9153-1c2df82ec752",
+	"totalPass": 40,
+	"totalFail": 10,
+	"results": [
+		{
+			"id": "ab6d49fc-9782-4d27-81ec-be698abe104f",
+			"name": "T_C1 Available_Positions",
+			"url": "https://jobs.github.com/positions.json",
+			"time": 5064,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5064
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "571cf6a7-3316-4b9f-9599-24cccd2f3b94",
+			"name": "T_C2 use HTTP nested of HTTPS URL",
+			"url": "http://jobs.github.com/positions.json",
+			"time": 2583,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2583
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "57e9c464-7dbc-4368-82f4-b1dc0c713834",
+			"name": "TC_3 location with description",
+			"url": "https://jobs.github.com/positions.json?description=python&location=newyork",
+			"time": 384,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				384
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "7f45a33d-58cf-4aae-a1c4-f96f29e82542",
+			"name": "T_C 6 Description",
+			"url": "https://jobs.github.com/positions.json?description=python",
+			"time": 3201,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3201
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "09b978d4-fd54-48eb-8086-57fd65491174",
+			"name": "T_C 7 empty description",
+			"url": "https://jobs.github.com/positions.json?description=",
+			"time": 2238,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2238
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "5c637f91-d182-4998-a73c-88a3fa0289d9",
+			"name": "T_C 8 special character_description",
+			"url": "https://jobs.github.com/positions.json?description=@#$%^%$#@!",
+			"time": 1690,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1690
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "87a421c1-d3ea-465a-9a0a-f0c908a7bd28",
+			"name": "T_C 9 numbers_description",
+			"url": "https://jobs.github.com/positions.json?description=1234567890",
+			"time": 468,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				468
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "00c84c26-dbdc-48d1-aa18-06fd4a5d5038",
+			"name": "T_C 10 Numbers_specialcharacters_description",
+			"url": "https://jobs.github.com/positions.json?description=1234567890!@#$%^&",
+			"time": 380,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				380
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "13a526b0-dfc9-4d00-a8a6-3b2a9cd32383",
+			"name": "T_C 11 description_page",
+			"url": "https://jobs.github.com/positions.json?description=python&page=1",
+			"time": 1836,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1836
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "bc1df201-3fc1-456c-8ea3-fb34169c9b16",
+			"name": "T_C 12 description_page with arabic number",
+			"url": "https://jobs.github.com/positions.json?description=python&page=٤",
+			"time": 2230,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2230
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "cb994ba6-33cb-4baa-90e6-e683849b609f",
+			"name": "T_C 13 Description_special character in page",
+			"url": "https://jobs.github.com/positions.json?description=python&page=@#$%^",
+			"time": 2440,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2440
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "05ab8baf-4c2c-4f65-bf73-efe87872070d",
+			"name": "T_C 14 Description_ with minus page number",
+			"url": "https://jobs.github.com/positions.json?description=python&page=-6",
+			"time": 2306,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2306
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "4311cb2c-973a-40c6-9bef-19a3e42e5508",
+			"name": "T_C 15 Page without description",
+			"url": "https://jobs.github.com/positions.json?page=1",
+			"time": 2249,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2249
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "fbbda6e3-e82e-4ef7-a7f2-cc1f43de8b51",
+			"name": "T_C 16 location without description",
+			"url": "https://jobs.github.com/positions.json?location=newyork",
+			"time": 690,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				690
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "a7a6f2e4-94f4-48b1-9132-173475326986",
+			"name": "T_C 17 multiple location without description",
+			"url": "https://jobs.github.com/positions.json?location=newyork,fsdjds",
+			"time": 685,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				685
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "81d9fa3e-a052-42b1-a951-406417cdd0a4",
+			"name": "T_C 18 location with special character and numbers",
+			"url": "https://jobs.github.com/positions.json?location=1234567!@#$%",
+			"time": 373,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				373
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "1f1a802f-1317-42a9-b8b5-4c92433d4b9e",
+			"name": "T_C 19 location with description & page",
+			"url": "https://jobs.github.com/positions.json?description=python&location=newyork&page=1",
+			"time": 461,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				461
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "07e59562-50f3-4511-af5c-c136570d7585",
+			"name": "T_C 20 location with long & lat and description",
+			"url": "https://jobs.github.com/positions.json?description=python&location=newyork&lat=37.3229978&long=-122.0321823",
+			"time": 432,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				432
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "523de4bc-a84d-4266-aa5c-e6cb6e8dbe45",
+			"name": "T_C 21 location with long & lat special character",
+			"url": "https://jobs.github.com/positions.json?location=newyork&lat=#$%231&long=^%^%366",
+			"time": 697,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				697
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "8343db18-bafd-4397-955e-371031c88e90",
+			"name": "T_C 22 fill time",
+			"url": "https://jobs.github.com/positions.json?description=python&full_time=true",
+			"time": 1291,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1291
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "ff4548bf-39ae-4c22-b5a9-5b00400ae67b",
+			"name": "T_C 23 full time spical character",
+			"url": "https://jobs.github.com/positions.json?description=python&full_time=$@$%@&*@",
+			"time": 4535,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4535
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "922595c3-c54f-45c2-8804-daa184c848eb",
+			"name": "T_C 24 full time zero or one",
+			"url": "https://jobs.github.com/positions.json?description=python&full_time=6",
+			"time": 5334,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5334
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": false
+				}
+			]
+		},
+		{
+			"id": "9f98d91d-98fe-462e-b6ac-a2fcba020ff4",
+			"name": "T_C 25 job by id",
+			"url": "https://jobs.github.com/positions/2ca1f0fa-b6ef-4710-9506-0965ce092b99.json",
+			"time": 802,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				802
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "3ea82e54-fb8d-4488-be8c-2e40665fe510",
+			"name": "T_C 26 job by id and markdown (not working right)",
+			"url": "https://jobs.github.com/positions/2ca1f0fa-b6ef-4710-9506-0965ce092b99.json?markdown=false",
+			"time": 508,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				508
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "4d3e9507-038f-4ce5-9f2b-7756b26f519c",
+			"name": "T_C 31 Available_Positions Copy",
+			"url": "https://jobs.github.com/positions.json",
+			"time": 2863,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 10000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 10000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2863
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 10000ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"collection": {
+		"requests": [
+			{
+				"id": "ab6d49fc-9782-4d27-81ec-be698abe104f",
+				"method": "GET"
+			},
+			{
+				"id": "571cf6a7-3316-4b9f-9599-24cccd2f3b94",
+				"method": "GET"
+			},
+			{
+				"id": "57e9c464-7dbc-4368-82f4-b1dc0c713834",
+				"method": "GET"
+			},
+			{
+				"id": "7f45a33d-58cf-4aae-a1c4-f96f29e82542",
+				"method": "GET"
+			},
+			{
+				"id": "09b978d4-fd54-48eb-8086-57fd65491174",
+				"method": "GET"
+			},
+			{
+				"id": "5c637f91-d182-4998-a73c-88a3fa0289d9",
+				"method": "GET"
+			},
+			{
+				"id": "87a421c1-d3ea-465a-9a0a-f0c908a7bd28",
+				"method": "GET"
+			},
+			{
+				"id": "00c84c26-dbdc-48d1-aa18-06fd4a5d5038",
+				"method": "GET"
+			},
+			{
+				"id": "13a526b0-dfc9-4d00-a8a6-3b2a9cd32383",
+				"method": "GET"
+			},
+			{
+				"id": "bc1df201-3fc1-456c-8ea3-fb34169c9b16",
+				"method": "GET"
+			},
+			{
+				"id": "cb994ba6-33cb-4baa-90e6-e683849b609f",
+				"method": "GET"
+			},
+			{
+				"id": "05ab8baf-4c2c-4f65-bf73-efe87872070d",
+				"method": "GET"
+			},
+			{
+				"id": "4311cb2c-973a-40c6-9bef-19a3e42e5508",
+				"method": "GET"
+			},
+			{
+				"id": "fbbda6e3-e82e-4ef7-a7f2-cc1f43de8b51",
+				"method": "GET"
+			},
+			{
+				"id": "a7a6f2e4-94f4-48b1-9132-173475326986",
+				"method": "GET"
+			},
+			{
+				"id": "81d9fa3e-a052-42b1-a951-406417cdd0a4",
+				"method": "GET"
+			},
+			{
+				"id": "1f1a802f-1317-42a9-b8b5-4c92433d4b9e",
+				"method": "GET"
+			},
+			{
+				"id": "07e59562-50f3-4511-af5c-c136570d7585",
+				"method": "GET"
+			},
+			{
+				"id": "523de4bc-a84d-4266-aa5c-e6cb6e8dbe45",
+				"method": "GET"
+			},
+			{
+				"id": "8343db18-bafd-4397-955e-371031c88e90",
+				"method": "GET"
+			},
+			{
+				"id": "ff4548bf-39ae-4c22-b5a9-5b00400ae67b",
+				"method": "GET"
+			},
+			{
+				"id": "922595c3-c54f-45c2-8804-daa184c848eb",
+				"method": "GET"
+			},
+			{
+				"id": "9f98d91d-98fe-462e-b6ac-a2fcba020ff4",
+				"method": "GET"
+			},
+			{
+				"id": "3ea82e54-fb8d-4488-be8c-2e40665fe510",
+				"method": "GET"
+			},
+			{
+				"id": "4d3e9507-038f-4ce5-9f2b-7756b26f519c",
+				"method": "GET"
+			}
+		]
+	}
+}
